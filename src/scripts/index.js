@@ -29,8 +29,8 @@ document.getElementById('input-search').addEventListener('keyup', e => {
 
 async function getUserData(userName) {
   const userResponse = await getUser(userName);
-
-  if (userResponse.message === 'Not found') {
+  
+  if (userResponse.message === 'Not Found') {
     screen.renderNotFound();
     return;
   }
@@ -39,7 +39,7 @@ async function getUserData(userName) {
 
   user.setInfo(userResponse);
   user.setRepositories(repositoriesResponse);
-  
+
   screen.renderUser(user);
 }
 
