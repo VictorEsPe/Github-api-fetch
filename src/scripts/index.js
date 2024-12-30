@@ -30,13 +30,14 @@ document.getElementById('input-search').addEventListener('keyup', e => {
 async function getUserData(userName) {
   const userResponse = await getUser(userName);
   
+  
   if (userResponse.message === 'Not Found') {
     screen.renderNotFound();
     return;
   }
-
+  
   const repositoriesResponse = await getRepos(userName);
-
+  
   user.setInfo(userResponse);
   user.setRepositories(repositoriesResponse);
 

@@ -97,6 +97,13 @@ main {
   width: 50%;
 }
 
+.container .profile-data .info .data > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
