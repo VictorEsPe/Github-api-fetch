@@ -22,9 +22,20 @@ const screen = {
                                   </div>`;
 
     let repositoriesItens = '';
+
     user.repositories.forEach(
       repo =>
-        (repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
+        (repositoriesItens += `<li>
+                                <a href="${repo.html_url}" target="_blank">
+                                  ${repo.name}
+                                  <div class="repo-stats">
+                                    <p>🍴 ${repo.forks_count}</p>
+                                    <p>⭐ ${repo.stargazers_count}</p>
+                                    <p>👀 ${repo.watchers_count}</p>
+                                    <p>👩‍💻 ${repo.language ?? 'Indefinido'}</p>
+                                  </div>
+                                </a>
+                              </li>`)
     );
 
     if (user.repositories.length > 0) {

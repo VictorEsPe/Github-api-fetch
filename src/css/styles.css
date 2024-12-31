@@ -149,6 +149,20 @@ main {
   color: #fff
 }
 
+.container .profile-data .repositories ul li a .repo-stats {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.container .profile-data .repositories ul li a .repo-stats p {
+  background-color: slateblue;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
 .container .profile-data.hide{
   display: none;
 }
